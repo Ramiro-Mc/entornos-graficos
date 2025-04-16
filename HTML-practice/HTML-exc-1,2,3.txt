@@ -1,0 +1,593 @@
+﻿Matias Fernando Garcia Marianelli 52959 - Ramiro Martinez Castro 52992
+Ejercitación 1 - Responder el siguiente cuestionario
+
+
+1. Qué es HTML, cuando fue creado, cuáles fueron las distintas versiones y cuál es la última?
+
+
+HTML (HyperText Markup Language) es el lenguaje que se usa para estructurar contenido en la web. Fue creado por Tim Berners-Lee en 1991. Desde entonces, ha pasado por varias versiones: HTML 1.0, 2.0, 3.2, 4.01, XHTML 1.0 y HTML5.
+La versión actual es HTML5, publicada en 2014, y aún en desarrollo como estándar “vivo”. HTML5 introdujo etiquetas semánticas, soporte multimedia nativo, y nuevas APIs para aplicaciones web modernas.
+
+
+2. ¿Cuáles son los principios básicos que el W3C recomienda seguir para la creación de documentos con HTML?
+
+
+* Usar etiquetas semánticas.
+
+* Separar contenido de diseño.
+
+* Hacer páginas accesibles.
+
+* Seguir los estándares.
+
+* Soporte para varios idiomas.
+
+
+
+
+3. En las Especificaciones de HTML, ¿cuándo un elemento o atributo se considera desaprobado? ¿y obsoleto?
+
+
+Desaprobado: aún se puede usar, pero ya no se recomienda. Podría eliminarse en futuras versiones. Se mantiene solo por compatibilidad.
+
+Obsoleto: ya no se debe usar y fue eliminado del estándar. Algunos navegadores lo ignoran o ya no lo soportan.
+
+
+
+
+4. ¿Qué es el DTD y cuáles son los posibles DTDs contemplados en la especificación de HTML 4.01?
+
+
+El DTD es una definición que establece la estructura y las reglas que debe seguir un documento HTML para ser considerado válido. En HTML, el DTD le indica al navegador cómo debe interpretar el contenido del documento, y también sirve para validar que el código esté correctamente estructurado.
+En la especificación de HTML 4.01 se contemplan tres tipos de DTD:
+   1. HTML 4.01 Strict
+ Este tipo no permite el uso de elementos ni atributos que han sido desaprobados en versiones anteriores. Está enfocado en un HTML más limpio y semántico, separado de la presentación, la cual debería manejarse con CSS.
+
+   2. HTML 4.01 Transitional
+ Permite tanto los elementos actuales como los obsoletos. Se diseñó para facilitar la transición desde versiones más antiguas de HTML, cuando todavía era común usar HTML para definir estilos directamente.
+
+   3. HTML 4.01 Frameset
+ Similar al Transitional, pero además permite el uso de marcos, una técnica antigua que dividía la ventana del navegador en secciones independientes. Este DTD se usa cuando el documento utiliza elementos frameset en lugar de body.
+
+
+5. ¿Qué son los metadatos y cómo se especifican en HTML?
+
+
+Los metadatos son información sobre el documento (como autor, descripción, codificación). No se muestran en la página pero son útiles para navegadores y buscadores.
+Se colocan dentro del <head> usando etiquetas como <meta>, <title>, y <link>.
+
+
+
+
+Ejercitación 2
+
+
+2.a)  <!-- Código controlado el día 12/08/2009 → 
+
+
+        RTA: es un comentario, en este caso se coloca al comienzo del documento, pero se pueden poner comentarios en cualquier parte de este
+
+
+
+
+
+
+2.b)  <div id="bloque1">Contenido del bloque1</div> 
+
+
+        RTA: Crea un bloque con un id para poder referenciar posteriormente. El id en este caso es “bloque 1”. Aunque  no es obligatorio asignarle un id, este facilita el trabajo y permite manipular mejor los div. Se colocan en el body
+
+
+
+
+
+
+2.c)  
+<img src="" alt="lugar imagen" id="im1" name="im1" width="32" height="32" 
+longdesc="detalles.htm" /> 
+
+
+RTA: Es una imagen, se coloca en el body donde se quiera colocar una foto, su único atributo obligatorio es el “src” que es de donde se va a obtener la foto internamente, el id es para ponerle un nombre, “longdesc” es la descripción de la foto, “name” es su nombre y width a height son la altura y el ancho de la imagen
+
+
+
+
+
+
+2.d) 
+<meta name="keywords" lang="es" content="casa, compra, venta, alquiler " /> 
+<meta http-equiv="expires" content="16-Sep-2019 7:49 PM" /> 
+
+
+RTA: Ambos se deben colocar dentro de la sección <head> del documento HTML.
+
+
+El 1ro:Define palabras clave para buscadores
+
+
+Indica que el contenido está en español (lang="es").
+
+
+ Elementos, etiquetas y atributos
+      * Etiqueta: <meta>
+
+      * Atributo name: valor "keywords" → indica que se está definiendo palabras clave.
+
+      * Atributo content: valor "casa, compra, venta, alquiler" → son las palabras clave.
+
+      * Atributo lang: valor "es" → idioma en que están las palabras clave.
+
+ ¿Son obligatorios?
+         * La etiqueta <meta> no es obligatoria.
+
+         * El atributo name es necesario cuando se quiere especificar qué tipo de metadato es.
+
+         * El atributo content es obligatorio si hay un name.
+
+         * lang no es obligatorio en <meta>, pero es útil para indicar el idioma.
+
+
+El 2do: indica una fecha de expiración del contenido. Le dice al navegador o a un proxy que el contenido dejará de ser válido después de esa fecha. Se usa en temas de caché.
+
+
+ Elementos, etiquetas y atributos:
+            * Etiqueta: <meta>
+
+            * Atributo http-equiv: valor "expires" → indica que se está simulando una cabecera HTTP.
+
+            * Atributo content: valor "16-Sep-2019 7:49 PM" → fecha de expiración del contenido.
+
+¿Son obligatorios?
+               * La etiqueta <meta> no es obligatoria.
+
+               * El atributo http-equiv es obligatorio si se desea simular un encabezado HTTP.
+
+               * content es obligatorio si se usa http-equiv.
+
+
+
+
+
+
+
+2.e) <a href="http://www.e-style.com.ar/resumen.html" type="text/html" hreflang="es" charset="utf-8" rel="help">Resumen HTML </a> 
+
+
+RTA: El siguiente fragmento de código HTML se coloca en la sección del <body> del documento, ya que representa un enlace visible e interactivo para el usuario. El efecto que produce es mostrar un texto que dice "Resumen HTML", y al hacer clic en él, se dirige al usuario a la URL especificada. La etiqueta principal utilizada es <a>, que es el elemento de anclaje, obligatorio para crear enlaces. 
+
+
+href="http://www.e-style.com.ar/resumen.html": Es un atributo obligatorio, ya que indica la dirección del recurso al que apunta el enlace.
+
+type="text/html": Es un atributo opcional que especifica el tipo MIME del recurso enlazado. Aunque válido, no es comúnmente utilizado en enlaces <a>, sino más bien en elementos como <link>.
+
+hreflang="es": También opcional, este atributo indica que el recurso enlazado está en idioma español. Es útil para mejorar la accesibilidad y el SEO.
+
+charset="utf-8": Este atributo no es válido en la etiqueta <a>. Se utiliza en otras partes del documento, como la etiqueta <meta> dentro del <head>, para declarar la codificación del documento.
+
+rel="help": Es un atributo opcional que indica la relación del recurso enlazado con el documento actual. En este caso, se especifica que el enlace conduce a una página de ayuda.
+
+
+
+
+2.f) 
+<table width="200" summary="Datos correspondientes al ejercicio vencido"> 
+<caption align="top"> Título </caption> 
+<tr> 
+<th scope="col">&nbsp;</th> 
+<th scope="col">A</th> 
+<th scope="col">B</th> 
+<th scope="col">C</th> 
+</tr> 
+<tr> 
+</tr> 
+<tr> 
+</tr> 
+</table>
+
+
+RTA: Este fragmento de código HTML debe colocarse dentro de la sección <body> del documento, ya que representa una tabla visible que organiza datos de forma estructurada. El efecto que produce es mostrar una tabla con un título superior y una fila de encabezados de columna (A, B, C). Aunque hay filas adicionales (<tr>) declaradas, están vacías, por lo que no se muestran datos debajo de los encabezados. El elemento principal es <table>, que sirve para crear tablas.
+                  * <table width="200" summary="Datos correspondientes al ejercicio vencido">:
+Esta etiqueta inicia la tabla.
+
+                     * width="200": Atributo opcional que indica el ancho de la tabla en píxeles. Actualmente no se recomienda usarlo en HTML5 (se prefiere el uso de CSS).
+
+                     * summary="Datos correspondientes al ejercicio vencido": Atributo opcional que proporciona un resumen del contenido o propósito de la tabla, especialmente útil para tecnologías de asistencia como lectores de pantalla.
+
+                        * <caption align="top">Título</caption>:
+Esta etiqueta opcional define un título para la tabla.
+
+                           * align="top": Atributo opcional que indica que el título debe aparecer encima de la tabla. Este atributo está obsoleto en HTML5; se recomienda controlar la posición del título con CSS.
+
+                              * <tr>:
+Representa una fila dentro de la tabla. En este código hay tres etiquetas <tr>:
+
+
+                              * <th scope="col">&nbsp;</th> y <th scope="col">A</th>, etc.:
+Estas etiquetas definen celdas de encabezado dentro de una fila (<tr>).
+
+                                 * scope="col": Atributo opcional que indica que el encabezado se aplica a una columna. Mejora la accesibilidad y es una buena práctica.
+
+                                 * &nbsp;: Representa un espacio en blanco no colapsable. Se utiliza para dejar una celda vacía visualmente, pero con contenido HTML válido.
+
+
+Ejercitación 3
+
+
+3.a)
+<a href="http://www.google.com.ar">Click aquí para ir a Google</a>
+Crea un enlace que lleva al sitio de Google Argentina en la misma pestaña.
+
+
+<a href="http://www.google.com.ar" target="_blank">Click aquí para ir a Google</a>
+Igual que el anterior, pero con target="_blank" abre Google en una nueva pestaña o ventana.
+
+
+<a href="http://www. google.com.ar" type="text/html" hreflang="es" charset="utf-8" rel="help">
+Es un enlace a Google, pero con atributos adicionales.
+
+
+<a href="#">Click aquí para ir a Google</a>
+El # hace que el enlace no cambie de página. Simplemente te mantiene en el mismo lugar.
+
+
+<a href="#arriba">Click aquí para volver arriba</a>
+Enlaza a un ancla llamada "arriba".
+
+
+<a name="arriba" id="arriba"></a>
+Define el destino del enlace anterior. Es un ancla interna en la página.
+Se puede ubicar, por ejemplo, al inicio del documento para que #arriba funcione.
+
+
+
+
+
+
+3.b) <p><img src="im1.jpg" alt="imagen1" /><a href="http://www.google.com.ar">Click aquí</a></p>
+ 
+En el primer fragmento, se muestra una imagen y, a continuación, un texto enlazado que dice "Click aquí". En este caso, solo el texto es un enlace; la imagen no tiene ninguna funcionalidad al hacer clic sobre ella.
+
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> Click aquí</p>
+
+
+En el segundo fragmento, la imagen está dentro de la etiqueta de enlace, por lo que se convierte en un enlace. Al hacer clic sobre la imagen se accede al sitio web. El texto "Click aquí" aparece después, pero no forma parte del enlace, por lo tanto no es clickeable.
+
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" />Click aquí</a></p>
+
+
+En el tercer fragmento, tanto la imagen como el texto están dentro de la misma etiqueta de enlace. Esto significa que toda la zona (la imagen y el texto "Click aquí") es clickeable y lleva al usuario al mismo destino. Es una forma efectiva de ampliar el área del enlace.
+
+
+<p><a href="http://www.google.com.ar"><img src="im1.jpg" alt="imagen1" /></a> <a
+href="http://www.google.com.ar">Click aquí</a></p>
+
+
+En el cuarto fragmento, la imagen y el texto están contenidos en dos enlaces separados, aunque apuntan a la misma dirección. Esto permite que tanto la imagen como el texto sean clickeables, pero de forma independiente.
+
+
+3.c) <ul>   
+<li>xxx</li> 
+<li>yyy</li> 
+<li>zzz</li> 
+</ul>
+
+
+Crea una lista no ordenada, es decir, con viñetas (•).
+
+
+<ol> 
+<li>xxx</li> 
+<li>yyy</li> 
+<li>zzz</li> 
+</ol> 
+
+
+Crea una lista numerada automáticamente.
+
+
+<ol> 
+<li>xxx</li> 
+</ol> 
+<ol> 
+<li value="2">yyy</li> 
+</ol> 
+<ol> 
+<li 
+value="3">zzz</li> 
+</ol> 
+
+
+Son tres listas por separado. Cada una tiene un solo ítem, pero se les asigna un número específico usando el atributo value.
+1. xxx
+2. yyy
+3. zzz
+Muestra un bloque de texto citado o destacado, con salto de línea entre ítems. No es una lista HTML formal.
+
+
+
+
+
+
+
+3.d)<table border="1" width="300">
+<tr>
+<th>Columna 1</th>
+<th>Columna 2</th>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+
+
+En el primer fragmento, se utilizan las etiquetas <th> para definir las celdas de encabezado de la tabla. Estas etiquetas indican que se trata de títulos de columna, y por defecto, el navegador aplica un estilo de texto en negrita y alineado al centro.
+
+
+<table border="1" width="300">
+<tr>
+<td><div align="center"><strong>Columna1</strong></div></td>
+<td><div align="center"><strong>Columna2</strong></div></td>
+</tr>
+<tr>
+<td>Celda 1</td>
+<td>Celda 2</td>
+</tr>
+<tr>
+<td>Celda 3</td>
+<td>Celda 4</td>
+</tr>
+</table>
+
+En el segundo fragmento, en lugar de utilizar <th>, se usan celdas normales (<td>) para los títulos de las columnas. Para simular la apariencia de un encabezado, se emplea una estructura adicional con <div align="center"><strong>…</strong></div> dentro de cada celda, logrando así una alineación centrada y texto en negrita.
+
+
+
+
+3.e) 
+
+
+    <table width="200"> 
+        <caption> 
+            Título 
+        </caption> 
+        <tr> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        </tr> 
+        <tr> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        <td bgcolor="#dddddd"> 
+        &nbsp;</td> 
+        <td bgcolor="#dddddd">&nbsp;</td> 
+        </tr>   
+        </table> 
+
+
+
+
+<caption>: coloca un título arriba de la tabla, centrado por defecto.
+
+<td bgcolor="#dddddd">: crea celdas con fondo gris claro.
+
+&nbsp;: agrega un espacio no separable para que las celdas no queden vacías (sino no se verían).
+
+
+   <table width="200"> 
+    <tr>
+    <td colspan="3"><div 
+    align="center">Título</div></td> 
+    </tr> 
+    <tr> 
+    <td bgcolor="#dddddd">&nbsp;</td> 
+    <td bgcolor="#dddddd">&nbsp;</td> 
+    <td bgcolor="#dddddd">&nbsp;</td> 
+    </tr> 
+    <tr> 
+    <td bgcolor="#dddddd">&nbsp;</td> 
+    <td bgcolor="#dddddd">&nbsp;</td> 
+    <td bgcolor="#dddddd">&nbsp;</td> 
+    </tr> 
+    </table> 
+
+
+<td colspan="3">: une 3 celdas en una sola (ocupa toda la fila).
+
+<div align="center">Título</div>: centra el título manualmente dentro de esa celda.
+
+Luego, dos filas normales con tres celdas cada una (fondo gris claro).
+
+
+
+
+
+
+3.f) <table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td rowspan="2" bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+
+
+
+En el primer fragmento, la tabla comienza con una celda que ocupa las tres columnas disponibles (colspan="3") para mostrar el título centrado. En la segunda fila, la primera celda tiene rowspan="2", lo que significa que se extiende verticalmente por dos filas. Las otras dos celdas de esa fila, así como las dos celdas de la fila siguiente, completan la estructura. Esto da como resultado una celda más alta a la izquierda (que ocupa dos filas) y dos celdas a la derecha alineadas en dos filas normales. El uso de rowspan crea un efecto de celda lateral más alta, útil para destacar o agrupar contenido verticalmente.
+
+
+<table width="200">
+<tr>
+<td colspan="3"><div align="center">Título</div></td>
+</tr>
+<tr>
+<td colspan="2"
+bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+<tr>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+<td bgcolor="#dddddd">&nbsp;</td>
+</tr>
+</table>
+
+
+En el segundo fragmento, también se inicia con una celda que ocupa las tres columnas para mostrar el título. Sin embargo, en la segunda fila se utiliza colspan="2" en la primera celda, lo que hace que esta ocupe horizontalmente dos columnas. La tercera celda de esa fila ocupa una sola columna. En la tercera fila, se incluyen tres celdas normales, una por cada columna. El uso de colspan en este caso permite combinar celdas horizontalmente, generando un diseño más amplio en la parte superior de esa fila. Visualmente, esta tabla presenta un diseño más simétrico y rectangular, con todas las celdas de igual altura.
+
+
+3.g) 
+<table width="200" border="1"> 
+<tr> 
+<td colspan="3"><div 
+align="center">Título</div></td> 
+</tr> 
+<tr> 
+<td colspan="2"rowspan="2">&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td width="50%">&nbsp;</td> 
+</tr> 
+</table>
+
+
+
+
+
+
+<table width="200" border="1"> 
+<tr> 
+<td colspan="3"><div 
+align="center">Título</div></td> 
+</tr> 
+<tr> 
+<td colspan="2"rowspan="2">&nbsp;</td> 
+<td>&nbsp;</td> 
+</tr> 
+<tr> 
+<td width="50%">&nbsp;</td> 
+</tr> 
+</table>
+Las dos tablas son exactamente iguales en estructura y contenido. Ambas generan una tabla con un título centrado arriba, y una disposición específica de celdas utilizando colspan y rowspan.
+3.h) <form id="form1" name="form1" action="procesar.php" method="post" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu1" name="usu1" value="xxx" /><br />
+Clave: <input type="password" id="clave1" name="clave1" value="xxx" />
+</fieldset>
+<input type="submit" id="boton1" name="boton1" value="Enviar" />
+</form>
+En el primer formulario, se utiliza la etiqueta <form> con atributos como id="form1", name="form1", action="procesar.php", method="post" y target="_blank". Esto indica que al enviar el formulario, los datos se enviarán mediante el método POST al archivo procesar.php, y el resultado se abrirá en una nueva pestaña o ventana. Dentro del formulario, se utiliza un <fieldset> con una leyenda (<legend>LOGIN), lo que da una presentación más organizada y accesible. Contiene dos campos de entrada: uno de texto para el usuario (<input type="text">) y otro de contraseña (<input type="password">). Ambos tienen valores por defecto (value="xxx"). El botón final es de tipo submit, por lo tanto, al hacer clic en "Enviar", los datos se procesarán como se definió en el atributo action.
+<form id="form2" name="form2" action="" method="get" target="_blank">
+LOGIN<br />
+<label>Usuario: <input type="text" id="usu2" name="usu2" /></label><br />
+<label>Clave: <input type="text" id="clave2" name="clave2" /></label><br />
+<input type="submit" id="boton2" name="boton2" value="Enviar" />
+</form>
+En el segundo formulario, también se recopilan usuario y clave, pero con algunas diferencias importantes. El atributo action está vacío (action=""), por lo que al enviarse el formulario, los datos se enviarán a la misma página actual. El método utilizado es get, lo que significa que los datos ingresados se agregarán a la URL, haciéndolos visibles. Además, se usan etiquetas <label> para asociar los textos "Usuario" y "Clave" con sus respectivos campos de entrada. Ambos campos son de tipo texto, incluso el campo de la clave, lo que no es adecuado en términos de privacidad. El botón de envío es también de tipo submit, y los atributos id, name y value funcionan como en el primer caso. 
+
+
+<form id="form3" name="form3" action="mailto:xx@xx.com” enctype=text/plain method="p
+ost" target="_blank">
+<fieldset>
+<legend>LOGIN</legend>
+Usuario: <input type="text" id="usu3" name="usu3" /><br />
+Clave: <input type="password" id="clave3" name="clave3" />
+</fieldset>
+<input type="reset" id="boton3" name="boton3" value=
+"Enviar" />
+</form>
+En el tercer formulario, se utiliza un método poco común: action="mailto:xx@xx.com", lo que indica que los datos se enviarán por correo electrónico al destinatario especificado. El atributo enctype="text/plain" define que los datos se enviarán en texto plano. El método de envío es post y, al igual que en los anteriores, el resultado se abrirá en una nueva ventana (target="_blank"). El formulario también está contenido en un <fieldset> con su respectiva leyenda. Se incluyen campos de texto y contraseña correctamente definidos. Sin embargo, el botón que aparece al final es de tipo reset, lo que en realidad no envía el formulario, sino que restablece los campos a sus valores iniciales. 
+
+
+3.i) <label>Botón 1
+<button type="button" name="boton1" id="boton1">
+<img src="logo.jpg" alt="Botón con imagen " width="30" height="20" /><br />
+<b>CLICK AQUÍ</b></button></label>
+
+
+En el primer fragmento, se utiliza la etiqueta <button type="button">, que permite un contenido más complejo dentro del botón. En este caso, el botón contiene una imagen (<img>) con un tamaño específico de 30 píxeles de ancho y 20 de alto, seguida de un salto de línea (<br />) y luego un texto en negrita que dice "CLICK AQUÍ".
+
+
+<label>Botón 2
+<input type="button" name="boton2" id="boton2" value="CLICK AQUÍ" />
+</label>
+
+
+En el segundo fragmento, se utiliza un <input type="button">, que es un botón más simple. No permite contenido interno HTML, por lo que solo puede mostrar el texto definido por el atributo value, en este caso "CLICK AQUÍ". También tiene atributos name, id y type, todos opcionales pero útiles para identificación y manipulación
+
+
+
+
+3.j)<p><label><input type="radio" name="opcion" id="X" value="X" />X</label><br /> 
+<label><input type="radio" name="opcion" id="Y" value="Y" />Y</label></p> 
+
+
+<p><label><input type="radio" name="opcion1" id="X" value="X" />X</label><br /> 
+<label><input type="radio" name="opcion2" id="Y" value="Y" />Y</label></p> 
+
+
+Ambos se ven exactamente iguales solo que el 1ro deja seleccionar una sola opción y el 2do deja seleccionar las 2 opciones al mismo tiempo. Debido a que en el 1ro tienen el mismo name y en el 2do tienen distintos nombres.
+3.k)
+
+
+<select name="lista"> 
+<optgroup label="Caso 1"> 
+<option>Mayo</option> 
+<option>Junio</option> 
+</optgroup> 
+<optgroup label="Caso 2"> 
+<option>Mayo</option> 
+<option>Junio</option> 
+</optgroup> 
+</select> 
+
+
+                                    * Muestra una lista desplegable donde el usuario solo puede seleccionar una opción.
+
+                                    * Las opciones están organizadas en grupos usando <optgroup>, con etiquetas "Caso 1" y "Caso 2".
+
+                                    * Ideal para mantener ordenadas muchas opciones relacionadas.
+
+
+
+
+
+
+
+<select name="lista[]" multiple="multiple"> 
+<optgroup label=" Caso 1"> 
+<option>Mayo</option> 
+<option>Junio</option> 
+</optgroup> 
+<optgroup label=" Caso 2"> 
+<option>Mayo</option> 
+<option>Junio</option> 
+</optgroup> 
+</select> 
+
+
+
+
+Muestra una lista más grande, donde el usuario puede seleccionar más de una opción (manteniendo presionadas Ctrl o Shift).
+
+También usa <optgroup> para agrupar opciones.
+
+El atributo multiple="multiple" permite la selección múltiple.
+
+El nombre "lista[]" con corchetes indica que se enviará un arreglo de valores si se usa en formularios.

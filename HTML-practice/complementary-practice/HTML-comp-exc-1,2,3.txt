@@ -1,0 +1,199 @@
+﻿Ejercitación 1
+
+
+1. ¿Ventajas de HTML5?
+* Mejora la estructura del contenido.
+
+* Soporta audio, video y gráficos sin plugins.
+
+* Compatible con dispositivos móviles.
+
+* Más semántico y limpio.
+
+2. ¿Por qué utilizarlo?
+   * Porque es el estándar actual y más completo.
+
+   * Mejora la accesibilidad y SEO.
+
+   * Permite desarrollar sitios más interactivos.
+
+3. Nombre ventajas
+      * Carga más rápida.
+
+      * Mejor integración con JavaScript y CSS3.
+
+      * Etiquetas nuevas como <article>, <section>, <nav>.
+
+      * Funciona mejor en navegadores modernos.
+
+ Ejercitación 2 
+2.A) ¿Qué formatos soporta?
+         * MP3
+
+         * OGG
+
+         * WAV
+
+2.B) Crear un elemento audio
+
+
+<audio controls>
+  <source src="https://html5tutorial.info/media/vincent.mp3" type="audio/mpeg">
+</audio>
+
+
+Ejercitación 3
+3.A) ¿Qué formatos soporta?
+            * MP4 (video/mp4)
+
+            * WebM (video/webm)
+
+            * OGG (video/ogg)
+
+3.B) Crear un elemento video
+
+
+<video width="320" height="240" controls>
+  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+ </video>
+
+
+Ejercitación 4 
+
+
+a)
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+ </head>
+<body>
+
+
+  <form action="procesar.php" method="post">
+    <label for="nombre">Nombre completo:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <br><br>
+
+
+    <input type="submit" value="Enviar">
+  </form>
+
+
+</body>
+</html>
+
+
+
+
+b)<html>
+        <head></head>
+        <body>
+
+
+
+
+            <form >
+                <fieldset>
+                <legend>LOGIN</legend>
+                Email: <input type="email" id="email1" name="email1"/>
+                </fieldset>
+                <input type="submit" id="boton1" name="boton1" value="Enviar" />
+                </form>            
+
+
+
+
+        </body>
+
+
+</html>
+
+
+c)
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+
+</head>
+<body>
+
+
+  <h2>Formulario con campo de fecha</h2>
+
+
+  <form action="procesar.php" method="post">
+    <label for="fecha">Fecha de nacimiento:</label>
+    <input type="date" id="fecha" name="fecha" required>
+    <br><br>
+
+
+    <input type="submit" value="Enviar">
+  </form>
+
+
+</body>
+</html>
+
+
+
+
+d)<html>
+        <head></head>
+        <body>
+
+
+
+
+            <form >
+                <fieldset>
+                <legend>LOGIN</legend>
+                Color: <input type="color" id="color" name="color"/>
+                </fieldset>
+                <input type="submit" id="boton1" name="boton1" value="Enviar" />
+                </form>            
+
+
+
+
+        </body>
+
+
+
+
+</html>
+
+
+e)
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+
+
+
+</head>
+<body>
+
+
+  <h2>Formulario con campo numérico</h2>
+
+
+  <form action="procesar.php" method="post">
+    <label for="edad">Edad:</label>
+    <input type="number" id="edad" name="edad" min="18" max="99" required>
+    <br><br>
+
+
+    <input type="submit" value="Enviar">
+  </form>
+
+
+</body>
+</html>
