@@ -1,0 +1,28 @@
+.margen{
+    border: 10px solid white;
+}
+
+.alta{
+    height: 120px;
+}
+
+.no-padding{
+    padding: 0;
+}
+
+@media screen and (max-width: 576px){
+    .desaparecer{
+        display: none;
+    }
+}
+
+.alert{
+    font-size: 0.7rem;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.button{
+    height: 2rem;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col margen" style="background-color:  #A1749D;">barra larga arriba</div>
+        </div>
+        <div class="row ">
+            <div class="col-sm-3 col-12 margen" style="background-color: #F7D9CE; padding: 1rem;">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">Abrir Modal</button>
+                <div class="modal fade" id="miModal" tabindex="-1" aria-hidden="true">
+                    <div class="modal-dialog">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title">Modal title</h5>
+                        </div>
+                        <div class="modal-body">
+                          <p>Modal body text goes here.</p>
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                          <button type="button" class="btn btn-primary">Save changes</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+            </div>
+            <div class="col-sm-9 col-12 no-padding">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 margen" style="background-color:  #7CD9A2;">
+                            <div class="alert alert-success" role="alert">
+                                A simple success alert with <a href="#" class="alert-link">an example link</a>. Give it a click if you like.
+                            </div>                              
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-6 margen" style="padding:8px; background-color: #9c8a97;">
+                            <div class="card h-100">
+                                <img src="paisaje.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vacaciones</h5>
+                                    <p class="card-text">Visita este hermoso lugar.</p>
+                                    <a href="#" class="btn btn-primary">Reservar</a>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="col-sm-4 col-6 margen" style="padding:8px; background-color: #9c8a97;">
+                            <div class="card h-100">
+                                <img src="paisaje.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vacaciones</h5>
+                                    <p class="card-text">Visita este hermoso lugar.</p>
+                                    <a href="#" class="btn btn-primary">Reservar</a>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="col-sm-4 desaparecer margen" style="background-color: #9c8a97;">cuadraditos 1</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4 col-6 margen" style="padding:8px; background-color: #9c8a97;">
+                            <div class="card h-100">
+                                <img src="paisaje.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vacaciones</h5>
+                                    <p class="card-text">Visita este hermoso lugar.</p>
+                                    <a href="#" class="btn btn-primary">Reservar</a>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="col-sm-4 col-6 margen" style="padding:8px; background-color: #9c8a97;">
+                            <div class="card h-100">
+                                <img src="paisaje.jpg" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Vacaciones</h5>
+                                    <p class="card-text">Visita este hermoso lugar.</p>
+                                    <a href="#" class="btn btn-primary">Reservar</a>
+                                </div>
+                                </div>
+                        </div>
+                        <div class="col-sm-4 desaparecer margen" style="background-color: #9c8a97;">cuadraditos 2</div>
+                    </div>
+                    <div class="row alta">
+                        <div class="col-sm-4 col-6 margen" style="background-color: #7ba6d8;">alto 1</div>
+                        <div class="col-sm-8 col-6 margen" style="background-color: #7ba6d8;">
+                            <div id="carouselExampleControls" class="carousel slide h-100" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                  <div class="carousel-item active">
+                                    <img src="paisaje.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="paisaje.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                  <div class="carousel-item">
+                                    <img src="paisaje.jpg" class="d-block w-100" alt="...">
+                                  </div>
+                                </div>
+                               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Previous</span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                                </button>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+</body>
+</html>
