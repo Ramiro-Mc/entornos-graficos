@@ -17,7 +17,6 @@ echo "Contador de visitas: " . $_SESSION["contador"] . "<br>";
     <title>Document</title>
 </head>
 <body>
-    <a href="correo.php">correo</a>
     <a href="formulario.php">formulario</a>
     <a href="recomendar.php">recomendar</a>
     <a href="logout.php">reiniciar contador</a>

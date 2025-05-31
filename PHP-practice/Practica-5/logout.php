@@ -1,7 +1,7 @@
 <?php
 session_start(); 
 
-unset($_SESSION);
+$_SESSION=[];
 
 header('location: index.html'); exit();
 
